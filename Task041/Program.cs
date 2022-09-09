@@ -7,17 +7,20 @@
 void PositiveNumber()
 {
     Console.WriteLine("Введите число");
-    string number = Console.ReadLine();
     int count = 0;
-    if (number == "stop")
+    for (int i = 0; ; i++)
     {
-        Console.WriteLine(count);
-    }
-    else
-    {
-        int num = Convert.ToInt32(number);
-        if (num > 0) count++;
+        string number = Console.ReadLine();
+        if (number == "stop") break;
+
+        else
+        {
+            int num = Convert.ToInt32(number);
+            if (num > 0) count++;
+        }
+    
     }
     Console.WriteLine(count);
+    
 }
 PositiveNumber();
